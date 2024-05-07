@@ -96,7 +96,7 @@ public class httpsClient {
         String line;
         boolean payloadStarted = false;
         while ((line = reader.readLine()) != null) {
-            if ("".equals(line) && !payloadStarted) {
+            if (line.isEmpty() && !payloadStarted) {
                 payloadStarted = true;
             }
 
